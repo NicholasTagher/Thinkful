@@ -1,4 +1,5 @@
 #First Thinkful Assignment--tip calculator
+
 puts "How much does your meal cost?"
 meal = Float(gets.chomp) #converts the string into an integer
 
@@ -15,7 +16,8 @@ tip_value = meal * tip/100 #expresses tip in $ terms
 total_cost = meal_with_tax + tip_value
 
 puts "The pre-tax cost of your meal was $%.2f." % meal
-puts "At "+tax+ " percent, the tax for this meal, in dollar terms, is $%.2f." % tax_value
-puts "For an 18 percent tip, you should leave $%.2f." % tip_value
+puts "At %.3f%%, the tax for this meal, in dollar terms, is $%.2f." % [tax, tax_value]
+puts "For an %.0f%% tip, you should leave $%.2f." % [tip, tip_value]  #this combines the two % in this statement
+#puts "For an %.2f" %tip + " percent tip, you should leave $%.2f." % tip_value
 puts "The total cost for this meal, therefore, is $%.2f." % total_cost
 
